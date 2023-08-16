@@ -240,24 +240,31 @@ hr {
   justify-content: space-between;
   align-items: center;
 }
-.logo img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding-right: 10px;
-}
-.logo h2 {
-  font-size: var(--step-1);
-}
-.logo a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  color: var(--white-color);
-  font-weight: bold;
+.logo {
+   display: flex;
+   flex-direction: row;
 }
 
+.logo a {
+    text-decoration: none;
+}
+.logo a img,
+.logo a h2 {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+.logo img {
+    width: 36px; 
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+.logo h2 {
+  font-size: var(--step-0);
+}
 .home-title {
   color: var(--primary-color);
   font-size: var(--step-3);
