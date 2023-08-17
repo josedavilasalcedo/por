@@ -37,6 +37,7 @@ body {
   color: var(--text-color);
 }
 
+/* links */
 a {
   color: var(--link-color);
   transition: all 0.5s ease-out;
@@ -45,40 +46,19 @@ a {
 a:hover {
   opacity: 0.75;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+ /* Headings */
+h1, h2, h3, h4, h5,h6 {
   margin: 0;
 }
 
-h1 {
-  font-size: 2rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.85rem; }
+h6 { font-size: 0.7rem; }
 
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: 0.85rem;
-}
-
-h6 {
-  font-size: 0.7rem;
-}
-
+/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -207,15 +187,6 @@ hr {
   max-width: var(--max-width);
 }
 
-.home {
-  padding: 4rem 1.5rem;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-}
 .title-center {
   text-align: center;
 }
@@ -224,6 +195,9 @@ hr {
 }
 
 /* ******* Site styles ********** */
+
+/* ******header****** */
+
 .header {
   position: fixed;
   padding: 1rem;
@@ -235,49 +209,68 @@ hr {
   background-color: var(--bg-color);
 }
 
-.header > .container{
+.header__container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
-   display: flex;
-   flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
-.logo a {
-    text-decoration: none;
+.logo__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
-.logo a img,
-.logo a h2 {
-    display: inline-block;
-    vertical-align: middle; 
+
+.logo__img {
+  width: 50px;
+  height: auto;
+}
+
+.logo__text {
+  font-size: var(--step-1);
+  color: var(--primary-color);
+  margin-left: 10px;
 }
 
 .logo img {
-    width: 36px; 
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
+  width: 36px; 
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
 }
-.logo h2 {
-  font-size: var(--step-0);
+
+/* ****** home ****** */
+
+.home {
+  padding: 4rem 1.5rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
-.home-title {
+
+.home__title {
   color: var(--primary-color);
   font-size: var(--step-3);
 }
 
-.home-sub-title {
+.home__sub-title {
   color: var(--text-color);
   font-size: var(--step-6);
   font-weight: bold;
   margin: 1rem 0;
 }
 
-.home-description {
+.home__description {
   margin: 1rem 0;
   text-align: center;
   line-height: 1.6;
@@ -292,7 +285,7 @@ hr {
   bottom: var(--header-height);
 }
 
-.footer-nav {
+.footer__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -304,18 +297,19 @@ hr {
 .over-f-none {
   overflow: auto;
 }
-.section-acerca {
+.about {
   line-height: 1.6;
   padding: var(--step-4);
 }
-.container-acerca {
+.about__container {
   font-size: var(--step-2);
   padding-bottom: 3rem;
 }
-.container-acerca 
+.about__container 
 h1,
 h2,
 h3 {
+  color: var(--bg-color);
   font-size: var(--step-3);
 }
 .skill {
@@ -334,18 +328,13 @@ h3 {
 .section-portafolio {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: var(--step-3);
-  padding-bottom: 8rem;
-}
-.section-portafolio {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 3rem;
   padding: 20px;
   padding-bottom: 8rem;
 }
-.section-portafolio h1 {
+
+.section-portafolio__title {
   width: 100%;
   font-size: var(--step-3);
   text-align: left;
@@ -354,15 +343,15 @@ h3 {
   padding: var(--step-2);
   border-radius: 10px;
 }
-.portafolio-img {
+.portafolio-container__img {
   max-width: 282px;
   height: max-content;
   margin: 1.5rem auto;
 }
-.portafolio-description {
+.portafolio-container__description {
   text-align: center;
 }
-.portafolio-description h2 {
+.portafolio-container__title {
   color: var(--primary-color);
 }
 
@@ -372,7 +361,7 @@ h3 {
   padding: 2rem 1rem;
   padding-bottom: 6rem;
 }
-.section-formulario h1 {
+.section-formulario__title h1 {
   font-size: var(--step-3);
   margin-bottom: 2rem;
 }
@@ -490,10 +479,10 @@ input[type="submit"]:hover {
     align-items: center;
     gap: 1rem;
   }
-  .portafolio-img {
+  .portafolio-container__img {
     max-width: 500px;
   }
-  .portafolio-description {
+  .portafolio-container__description {
     width: 50%;
   }
 
