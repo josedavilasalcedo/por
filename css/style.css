@@ -97,7 +97,7 @@ article {
   padding: 1rem 0.5rem;
 }
 .underline-heading {
-  background-image: url(../img/wave.svg);
+ background-image: url("./img/wave.svg");
   background-position: 30% 80%;
   background-repeat: no-repeat;
   background-size: 100%;
