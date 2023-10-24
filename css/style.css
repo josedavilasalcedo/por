@@ -1,577 +1,560 @@
-/* Reset CSS básico */
-
-/* Establecer el margen y el relleno en cero para todos los elementos */
-* {
+*,::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
-  --text-color: #003049;
-  --color-black: #000;
-  --secondary-color: #fff;
-  --bg-color: #f9f6f6;
-  --purple-color: #651f9e;
-  --purple-color-50: hsla(273, 67%, 37%, 0.647);
-  --font-family: "Lato", sans-serif;
-  --line-height: 1.5;
+  --font-family: 'Lato', sans-serif;
+   --color-primary: #651F9E; /* Color primario */
+  --color-secondary: #F2EFEF; /* Color secundario */
+  --color-background: #F9F6F6; /* Color de fondo */
+  --color-text: #320A52; 
+  --color-bg: #52280a13; 
+  --color-bg-1: #320a5218; 
+  --color-bg-2: #f23ebc50; 
+  --mg-0: 0.5rem;
+  --step--2: clamp(0.7rem, calc(0.87rem + -0.14vw), 0.84rem);
+  --step--1: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
+  --step-0: clamp(0.9rem, calc(1.03rem + 0.19vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem);
+  --step-2: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem);
+  --step-3: clamp(1.51rem, calc(1.22rem + 1.45vw), 2.96rem);
+ 
 }
 
-/* Establecer la fuente predeterminada y el tamaño de fuente para el cuerpo */
-body {
-  color: var(--color-black);
-  font-family: var(--font-family);
+html {
   font-size: 16px;
-  background-color: var(--bg-color);
+}
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+
+}
+body {
+  color: var(--color-text);
+  line-height: 1.6;
+  background: #f9f9f9;
 }
 
-/* Establecer un estilo de lista predeterminado */
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
-/* Restablecer estilos de enlace */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 10px 0;
-}
-
-span {
-  font-size: 18px;
-  line-height: 1.3;
-}
-/* Restablecer la apariencia predeterminada de los elementos de formulario */
-input,
-button,
-select,
-textarea {
+button, input, select, textarea {
   font-family: inherit;
-  font-size: inherit;
-  border: none;
-  outline: none;
-  background: none;
-}
-
-/* Restablecer la apariencia de los elementos de formulario que pueden ser botones */
-button,
-input[type="button"],
-input[type="submit"] {
-  cursor: pointer;
-}
-
-/* Restablecer la apariencia de los elementos de formulario que pueden tener bordes predeterminados */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  border: 1px solid #ccc;
 }
 
 img {
   max-width: 100%;
+  border-radius: 8px;
   height: auto;
 }
 
-/*Reutilizable*/
-.hover {
-  border-radius: 10px;
-}
-
-.hover:hover {
-  background-color: hsla(273, 21%, 57%, 0.098); /* Aumenté la opacidad a 0.5 */
-  backdrop-filter: blur(10px);
-}
-
-
-article {
-  margin: 20px 0px;
-  padding: 1rem 0.5rem;
-}
-.underline-heading {
- background-image: url("./img/wave.svg");
-  background-position: 30% 80%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  overflow: visible;
-}
-.glass-container {
-   /* Color de fondo semitransparente */
-  backdrop-filter: blur(10px); /* Aplicar filtro de desenfoque */
-  background: rgba(81, 81, 81, 0.038);
-}
-
-.color-toggle {
-  background-color: var(--purple-color);
-  padding: 7px 10px;
-  border-radius: 4px;
-}
-.toogle-btn {
-  display: flex; /* Usamos flexbox para centrar verticalmente el contenido */
-  align-items: center; /* Centramos verticalmente el contenido */
-  justify-content: center; /* Centramos horizontalmente el contenido */
-  width: 36px; /* Establecemos un ancho fijo */
-  height: 37px;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 10001;
-  padding: 10px;
-  overflow: hidden; /* Ocultamos el contenido que exceda el tamaño del contenedor */
-}
-#menu-icon {
-  display: none;
-  width: 36px; /* Establecemos un ancho fijo */
-  height: 37px;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 10001;
-  padding: 10px;
-  overflow: hidden; /* Ocultamos el contenido que exceda el tamaño del contenedor */
-}
-
-.toogle-btn {
-  background-color: var(--purple-color);
-}
-#menu-icon {
-  background-color: var(--purple-color);
-}
-
-#menu-icon i,
-.toogle-btn i {
-  font-size: 1.2rem;
-}
-#menu-icon i {
-  color: var(--secondary-color);
-}
-
-.toogle-btn {
-  color: var(--secondary-color);
-}
-.title-1,
-.title-2,
-.title-3 {
-  margin-bottom:0.6rem;
-}
-.title-1 {
-  width: max-content;
-  font-weight: 900;
-}
-.title-2 {
-  width: max-content;
-  font-weight: 700;
-}
-.title-3 {
-  font-weight: 100;
-}
+/* Estilos Reutilizables */
 
 .btn-1 {
-  display: inline-block;
-  border-radius: 3px;
-   border: 1px solid transparent;
-  padding: 6px 20px;
-  background-color: var(--purple-color);
-  color: #fff;
-  cursor: pointer;
-  transition: all .3s;
-
-  &:hover {
-  color: var(--color-black);
-  border: 1px solid var(--purple-color);
-  background-color: var(--secondary-color);
-  box-shadow: 4px 4px 2px  var(--purple-color);
-  }
-}
-
-.btn-2 {
-  color: var(--secondary-color);
-  padding: 4px 8px;
-  font-size: 20px;
-  font-weight: 400;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  background-color: var(--purple-color);
-  transition: all .3s;
-}
-.btn-2:hover {
-  color: var(--color-black);
-  border: 2px solid var(--purple-color);
-  background-color: var(--secondary-color);
-  box-shadow: 3px 2px 2px  var(--purple-color);
-}
-
-/* Estilo para la etiqueta <hr> */
-hr {
-  width: 50%;
-  border: none;
-  height: 1px;
-  background-color: var(--purple-color); /* Puedes cambiar el color a tu preferencia */
-  margin: 1.7rem auto;
-}
-
-/* Estilos generales para el header */
-header {
-  position: fixed;
-  width: 100%;
-  padding: 10px 18%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img {
-  width: 28px;
-  margin-right: 4px;
-  animation: rotateLogo 12s linear infinite; /* Agregamos una animación llamada "rotateLogo" */
-}
-
-@keyframes rotateLogo {
-  0% {
-    transform: rotate(0deg); /* Sin rotación inicial */
-  }
-  100% {
-    transform: rotate(360deg); /* Gira la imagen 360 grados */
-  }
-}
-
-
-
-.logo span {
-  color: var(--purple-color);
-  font-size: 1.4rem;
-  font-weight: 900;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.navbar a {
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 5px;
-  transition: all 0.6s ease;
-}
-.navbar a:hover {
-  color: var(--purple-color);
-}
-
-.navbar .nav-link.active {
-  color: var(--secondary-color);
-  background-color: var(--purple-color);
+  border: 5px solid var(--color-primary);
   border-radius: 4px;
+}
+.glass-container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.894);
+}
+hr {
+  margin:  4rem auto;
+  height: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color-bg-1);
+  width: 20%;
+}
+.hr-2 {
+  margin: 2rem auto;
+  height: 8px;
+  width: 40%;
+}
+.text-right {
+  text-align: right;
+}
+.bp, .redes a {
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  padding: 5px;
+  height: 34px;
+  width: 34px;
+}
+
+.d-none {
+  display: none;
+}
+
+.h-v  {
+  color: transparent;
+}
+
+.h-v:hover  {
+  background-color: var(--color-bg);
 }
 
 .main {
-  display: flex;
-  gap: 1rem;
+  width: 80%;
+} 
+.hv-1 {
+  width: max-content;
+  position: relative;
+  font-size: var(--step-0);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  color: var(--color-primary);
+  
+}
+.hv-1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-bg);
+  height: 12px;
+  width: 40%;
+  left: 0;
+  bottom: 6px;
+  transition: 0.5s;
+  z-index: -2222;
+}
+.hv-1:hover::after {
+  width: 100%;
+  z-index: -222;
+  background-color: var(--color-bg-2);
+}
+.hv-2::after{
+  width: 60%;
+  background-color: #ffff0068;
+}
+.hv-3::after{
+  width: 60%;
+  background-color: #002fff68;
+}
+.hv-4::after{
+  width: 60%;
+  background-color: #ff00006d;
 }
 
-/*Home*/
+
+
+/* ==================== */
+
+
+/* Estilos principales de la pagina */
+
+
+/* Estilos para el header, logo, menu y boton para cambiar tema oscuro */
 
 .home {
-  margin: 0 auto;
-  margin-top: 70px; /* Mantenemos el margen superior original */
-  max-width: 700px;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
-  margin-bottom: 60px;
-}
-
-.frase {
-  margin: 0 auto;
-  padding: 10px;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 10px;
-  color: var(--color-black);
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-  background: #f0f0f0; /* Color de fondo */
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(255, 255, 255, 0.7); /* Sombras */
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1; /* La opacidad llega a 1 para que el elemento aparezca gradualmente */
-  }
-}
-
-
-/*I am*/
-.i-am {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem;
-  margin-top: 0.8rem;
-}
-
-
-.avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid var(--purple-color);
-    overflow: hidden;
-    margin-left: 8rem;
-}
-
-.avatar img {
-  width: 100%;
-  height: auto;
-  animation: moveImage 12s linear infinite; /* Agregamos una animación llamada "moveImage" */
-}
-
-@keyframes moveImage {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px); /* Mueve la imagen horizontalmente 20px */
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/*Estudios*/
-
-.estud li{
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
-
-/*Mis redes*/
-
-.redes {
-  width: max-content;
-  display: flex;
-  align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
+  margin: 4rem auto 0;
+  padding: 6rem 10px 0;
 }
 
-.redes a {
-  margin-bottom: 10px;
-}
-
-/*Porfolio*/
-
-.work{
-  margin: 2rem 0;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-.work img {
-  width: 90%;
-  border-radius: 10px;
-}
-
-.work p {
-  width: 90%;
-  text-align: center;
-}
-
-/*Contacto*/
-.bg-form {
-  background-image: url(../img/form.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-  padding: 40px 20px;
-  margin-top: 2rem;
-}
-.container-form {
-  max-width: 400px;
-  margin: 0 auto;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
-  backdrop-filter:blur(20px);
-  border-radius: 10px;
-  padding: 30px 40px;
-  color: var(--secondary-color);
-
-}
-
-form h2{
-  text-align: center;
-  margin-bottom: 10px;
-  color: var(--secondary-color);
-  font-weight: 900;
-}
-    
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  color: var(--secondary-color);
+.header {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 10px;
-}
-/* Estilo del placeholder para input */
-input::placeholder {
-  color: var(--secondary-color);
-  font-style: italic; 
-  font-size: 14px;
-}
-
-/* Estilo del placeholder para textarea */
-textarea::placeholder {
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-
-    
-/* Estilo del botón */
-button[type="submit"] {
-  background-color: var(--secondary-color);
-  color: var(--purple-color);
-  font-weight: 600;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0 auto; /* Centra el botón horizontalmente en el contenedor */
-  display: block; /* Convierte el botón en un bloque para que ocupe todo el ancho disponible */
-}
-
-    
-@media screen and (max-width: 600px) {
-  .container-form {
-    padding: 10px;
-  }
-}
-
-/*Footer*/
-footer {
-  width: 100%;
-  text-align: center;
-  display: block;
-  bottom: 0;
+  height: 4rem;
   position: fixed;
-}
-/* Centramos el contenido en pantallas más pequeñas */
-@media (max-width: 768px) {
-  .home {
-    align-items: center;
-  }
-}
-@media (min-width: 1020px) {
-    .i-am {
-      flex-direction: row;
-      gap: 4rem;
-      align-items: center;
-    }
-    .avatar {
-      margin-left: 0;
-    }
-}
-/*Media 1280px*/
-
-@media  (max-width: 1280px) {
-  header {
-    padding: 10px 2%;
-    transition: 0.2s;
-  }
-  .navbar a {
-    padding: 5px 0;
-    margin: 0px 20px;
-  }
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
-@media (max-width: 1090px) {
-  #menu-icon {
-    display: block;
-  }
-  .navbar {
-    color: var(--secondary-color);
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 270px;
-    height: max-content;
-    background-color: #003049;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 10px;
-    transition: all 0.5s;
-  }
-  .navbar a {
-    display: block;
-    margin: 12px 0;
-    padding: 0pc 25px;
-    transition: all 0.5s;
-  }
-
-  .navbar a:hover {
-    transform: translateY(5px);
-  }
-
-  .navbar.open {
-    right: 2%;
-  }
-
+.header-container {
+  width:67%;
+  margin: 0 auto;
+  display: flex;
+  padding: 12px 0 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.logo, .redes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    transition: 0.5s;
+}
+.logo:hover, .redes a   {
+  background: var(--color-primary);
+}
 
-/* Estilos para el modo oscuro */
-body.modo-oscuro {
-  background-color: #202023;
+.logo h2 {
+  font-size: var(--step--1);
+  color: var(--color-primary);
+}
+
+.logo:hover h2  {
   color: #fff;
 }
 
-.modo-oscuro .logo span {
-    color: var(--bg-color);
-    font-size: 1.4rem;
-    font-weight: 900;
-}
-.modo-oscuro .frase {
-  padding: 10px;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 10px;
-  color: var(--color-white); /* Cambiado a color blanco para que el texto sea visible */
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-  background: #262626; /* Cambiado el color de fondo a un tono oscuro */
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(10, 10, 10, 0.1); /* Sombras con colores oscuros */
+.nav-link.active {
+  border-bottom:3px solid var(--color-bg-2);
+  color: var(--color-text);
 }
 
-.modo-oscuro .logo img {
-    width: 28px;
-    margin-right: 4px;
-    animation: rotateLogo 12s linear infinite;
-    fill: white; /* Cambia el color del SVG a blanco */
+.menu a {
+  margin: 0;
+  padding: 5px 10px;
+  color: var(--color-text);
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color .5s ease;
+}
+
+.menu a:hover{
+  background-color: var(--color-bg);
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.icons a {
+  color: #0072b1;
+  padding: 0 10px;
+  border: 2px dashed #0072b1;
+}
+
+.hamburger-button {
+  border: none;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+/* ==================== */
+
+
+/* hero */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-radius: 4px;
+  border: 4px solid transparent;
+}
+.hero:hover, section:hover {
+  border: 4px dotted var(--color-bg);
+}
+.hero-i-am {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.hero-i-am h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--mg-0);
+}
+
+.hero-i-am h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: var(--mg-0);
+}
+
+.hero-i-am p {
+  margin-bottom: var(--mg-0);
+  font-size: var(--step-0);
+}
+
+.hero-i-am a {
+  border: 5px solid var(--color-primary);
+  border-radius: 4px;
+}
+.hero-i-am a:hover {
+    border: 5px solid var(--color-bg-2);
+}
+
+.hero-avatar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.hero-img  {
+  border: 4px solid var(--color-primary);
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-position: center;
+  overflow: hidden;
+}
+
+.redes {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ animation: .4s;
+}
+.redes a:hover {
+  transform: translateY(-5px);
+}
+
+/* Acerca de */
+
+.article {
+  margin-top: 1.5rem;
+  padding: 4rem 1.6rem;
+  border-radius: 4px;
+}
+.article .title{
+  font-size: var(--step-3);
+}
+.article .paragraph {
+  padding: 10px;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+.skill h3{
+  font-size: var(--step-2);
+  font-weight: 700;
+  text-align: center;
+}
+.skill-icon {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.educacion, .educacion-cmp {
+  padding: 0 10px;
+}
+.educacion {
+  text-align: right;
+}
+
+.educacion  ul li , .educacion-cmp ul li, .paragraph {
+  font-size: var(--step-0);
+  padding: 0 10px;
+}
+.educacion-cmp {
+  color: var(--color-text);
+}
+
+/* section portafolio*/
+section {
+  border: 4px solid transparent;
+  padding: 4rem 10px;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    border: 4px solid var(--color-bg);
+    border-radius: 4px;
+    margin: 1rem 0;
+    padding: 10px;
+    transition: .6s;
+}
+.project h2 {
+  font-size: var(--step-1);
+}
+.project p {
+  font-size: var(--step-0);  
+}
+.project:hover {
+      border: 4px solid var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.container-form {
+  margin: 4rem auto;
+ }
+
+  /* foooter */
+.home + .footer {
+    position: absolute;
+    bottom: 0;
+}
+ 
+  /* Estilo para el footer */
+.footer {
+  padding: var(--step-0);
+    width: 100%;
+    display: block;
+    font-family: var(--font-logo);
+    font-size: var(--step-0);
+    font-weight: 700;
+    text-align: center;
+}
+
+.container-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  border: 4px solid var(--color-bg);
+  border-radius: 4px;
+}
+
+.container-form form {
+  padding: 20px;
+}
+
+.container-form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.container-form input,
+.container-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 4px solid var(--color-bg-1);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.container-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .7s;
+    border: 4px solid transparent;
+}
+
+.container-form button:hover {
+  color: var(--color-text);
+  background-color: #fff;
+  border: 4px solid var(--color-bg-2);
+}
+
+@media (max-width: 576px) {
+  .container-form {
+    max-width: 100%;
+  }
+}
+
+/* ==================== */
+
+
+@media (max-width: 768px) {
+  .home {
+    margin: 2rem auto;
+  }
+  .header {
+    top: auto; /* Quita la propiedad 'top' */
+    bottom: 0;
+  }
+  .header-container {
+     width: 88%;
+  }
+  /* Oculta el menú en la versión móvil */
+/* Estilos para mostrar el menú en la pantalla móvil (cuando tiene la clase "show-menu") */
+.menu {
+  display: none;
+}
+
+.menu.show-menu {
+  max-height: 500px; /* Ajusta la altura máxima según tu diseño */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 90px; 
+  right: 0; 
+  min-width: 200px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Muestra el botón de hamburguesa en la versión móvil */
+.hamburger-button {
+  display: block;
+}
+
+.home {
+  padding: 0 10px;
+}
+
+.hero {
+  padding: 10px;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-i-am {
+  width: 100%;
+}
+.article {
+  margin: 0;
+  padding: 10px;
+}
+.article .paragraph {
+  padding: 10px 0;
+}
+.educacion ul li {
+  padding: 5px 0;
+}
+
+.container-form {
+    padding: 10px;
+    margin: 1rem 0;
+  }
+
+  form h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  .footer {
+    margin-bottom: 2rem;
+  }
 }
