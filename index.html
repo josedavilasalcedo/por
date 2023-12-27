@@ -119,29 +119,88 @@
   </section>
 
   <hr>
-   <section id="portfolio" class="article">
-      <h2 class=" title hv-1 hv-3">Portafolio</h2>
-    <div class="portfolio-grid" >
-        <!-- Primer proyecto -->
-        <div class="project">
-            <a href="enlace_al_primer_proyecto.html">
-                <img src="img/portafolio.PNG" alt="Proyecto 1">
-            </a>
-            <h2>Sitio web</h2>
-            <p>He utilizado HTML, CSS y JavaScript para crear una experiencia digital única. Explora mis proyectos y descubre mi pasión por la creación web.</p>
-        </div>
 
-        <!-- Segundo proyecto -->
-        <div class="project">
-            <a href="enlace_al_segundo_proyecto.html">
-                <img src="img/lista.PNG" alt="Proyecto 2">
-            </a>
-            <h2>Proyecto 2</h2>
-            <p>La lista de tareas es una herramienta esencial para organizar, priorizar y mantener la productividad.</p>
-          </div>
-        <!-- Puedes agregar más proyectos siguiendo el mismo formato -->
+    <section  id="portfolio" class="portfolio article">
+	
+      <header class="section-head">
+        <h1>Algunos de mis últimos trabajos</h1>
+      </header>
+    
+      <main class="mainContainer">
+        
+        <!--  *****  Buttons Section Starts  *****  -->
+        <div class="button-group">
+          <button class="button active" data-filter="*">Todo</button>
+          <button class="button" data-filter=".design">Diseño</button>
+        <button class="button" data-filter=".development">Desarrollo</button>
+          <button class="button" data-filter=".logo">Logo</button>
         </div>
-   </section>
+        <!--  *****  Buttons Section Ends  *****  -->
+    
+        <!--  *****  Gallery Section Starts  *****  -->
+        <div class="gallery">
+          
+          <!--  *****  Card 1 Starts  *****  -->
+          <div class="item design">
+            <img src="img/portafolio.PNG">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 1 Ends  *****  -->
+    
+          <!--  *****  Card 2 Starts  *****  -->
+          <div class="item design">
+            <img src="img/lista.PNG">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 2 Ends  *****  -->
+    
+          <!--  *****  Card 3 Starts  *****  -->
+          <div class="item development">
+            <img src="img/lista.PNG">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 3 Ends  *****  -->
+    
+          <!--  *****  Card 4 Starts  *****  -->
+          <div class="item development">
+            <img src="website2.jpg">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 4 Ends  *****  -->
+    
+          <!--  *****  Card 5 Starts  *****  -->
+          <div class="item development">
+            <img src="website3.jpg">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 5 Ends  *****  -->
+    
+          <!--  *****  Card 6 Starts  *****  -->
+          <div class="item logo">
+            <img src="logo1.jpg">
+            <div class="overlay">
+              <a href="#">VER MAS</a>
+            </div>
+          </div>
+          <!--  *****  Card 6 Ends  *****  -->
+    
+        </div>
+        <!--  *****  Gallery Section Ends  *****  -->
+    
+      </main>
+    
+    </section>
+
    <hr>
 
    <section id="contacto" class="article" >
@@ -170,6 +229,25 @@
   </footer>
   </main>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!--   *****   Isotope Filter Link   *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+	  var $galleryContainer = $('.gallery').isotope({
+		itemSelector: '.item',
+  		layoutMode: 'fitRows'
+	})
+
+	$('.button-group .button').on('click', function(){
+		$('.button-group .button').removeClass('active');
+		$(this).addClass('active');
+
+		var value = $(this).attr('data-filter');
+		$galleryContainer.isotope({
+			filter: value 
+		})
+	})
+</script>
 </body>
 </html>

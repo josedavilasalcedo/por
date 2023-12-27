@@ -24,7 +24,8 @@ const navLinks = document.querySelectorAll('.nav-link');
       }
     });
   }
-
   window.addEventListener('scroll', highlightNavLink);
+
+
 
 
