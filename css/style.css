@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*======== Using Css Custom Variables =========*/
+
+body.dark {
+  --bg-color1: #0b0f19;
+  --bg-color2: #1c1e2a;
+  --color1: #FFF;
+  --color2: #DDD;
+}
+
+body:not(.dark) {
+  --bg-color1: #fbfdff;
+  --bg-color2: #f5f5f5;
+  --color1: #3e4455;
+  --color2: #000;
+}
+
+/*======= Universal CSS Properties =======*/
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color1);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--color1);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: var(--color1);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--color1);
+}
+
+p strong {
+  font-weight: 500;
+  color: var(--color2);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* portafolio container */
+.portfolio-container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.portafolio-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilos de navegacion*/
+
+header {
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: .8s;
+  padding: 15px;
+  position: fixed;
+  background-color: var(--bg-color1);
+}
+
+header .portafolio-row.header-wrap {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name a {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.portfolio-navbar {
+  display: none;
+}
+
+.navbar-toggle i {
+  font-size: 1.2rem;
+  line-height: 30px;
+  cursor: pointer;
+  color: var(--color1);
+}
+
+/* Menu mobil */
+.portfolio-navbar.show {
+  display: block;
+  position: absolute;
+  background-color: rgb(236, 241, 256);
+  width: 100%;
+  left: 0;
+  top: 60px;
+  padding: 3px;
+  border-top: 4px solid grey;
+  text-align: center;
+}
+
+.portfolio-navbar ul li {
+  display: block;
+}
+
+.portfolio-navbar ul li a {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 45px;
+}
+/* Style for about me */
+
+#about {
+  padding-top: 100px;
+  background-color: var(--bg-color1);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-intro {
+  margin: 3rem 0;
+  width: 100%;
+  order: 2;
+  text-align: center;
+}
+
+.about-text h3 {
+  color: var(--color1);
+  margin-bottom: 10px;
+}
+
+/*======== CSS Main Heading =======*/
+
+h1 strong,
+h2 strong {
+  background-image: linear-gradient(to right, #977ec7 0%, rgba(17, 17, 255, 0.91) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/*=========== Style For About Image ==========*/
+.about-image {
+  width: 100%;
+  order: 1;
+  position: relative;
+  z-index: 2;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.about-image::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-image: linear-gradient(11deg, #6ec1e4 0%, #54595f 100%);
+  z-index: -1;
+  transition: all .5s ease-in-out;
+  border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%;
+  box-shadow: 2px 10px 0px 0px rgba(216, 19, 19, 0.16);
+}
+
+.about-image:hover {
+  transform: translateY(-10.5px);
+}
+
+.about-image img {
+  border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%;
+}
+
+.about-image:hover::before {
+  filter: drop-shadow(0 0 30px rgba(130, 237, 255, 0.97));
+}
+
+/* Style for Curriculum */
+
+
+.resume-intro {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.resume-text {
+  margin-top: 18px;
+}
+
+/* Btn contact */
+.hello-btn a {
+  display: inline-block;
+
+}
+
+/* Style for Resume */
+.resume-body {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.resume-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*========= Style For Resume Body =========*/
+
+.btn {
+  position: relative;
+  padding: 0 10px;
+  background-color: #d5d5d5;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  line-height: 40px;
+  color: #000;
+  cursor: pointer;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+  transition: .4s;
+}
+
+.btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.btn:hover,
+.btn.active {
+  background-color: #4d63dd;
+  color: #FFF;
+}
+
+/* ========== Style For Resume Tab ========== */
+
+.resume-tab {
+  display: none;
+}
+
+.resume-tab.active {
+  display: block;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.institution,
+.organization {
+  color: #4d63dd;
+  font-weight: 400;
+}
+
+.year {
+  color: var(--color1);
+}
+
+.qualification-content {
+  position: relative;
+  padding: 1rem 2.1rem;
+}
+
+.qualification-content::after {
+  position: absolute;
+  content: "";
+  height: 7px;
+  width: 7px;
+  left: 8px;
+  top: 25px;
+  transform: rotate(45deg);
+  background: #4d63dd;
+}
+
+.qualification-content::before {
+  content: "";
+  height: 70%;
+  width: 3px;
+  left: 10px;
+  position: absolute;
+  background: #e8e8e8;
+}
+
+/* Style for Resume tab */
+
+.resume-tab {
+  display: none;
+}
+
+.resume-tab.active {
+  display: block;
+}
+
+/* style for bar */
+
+.bar-content {
+  position: relative;
+  padding: 1rem 2.1rem;
+}
+
+.bar-content,
+.bar-title {
+  margin-bottom: 8px;
+}
+
+.bar-content .icons {
+  margin-bottom: 0.8rem;
+}
+
+.bar-content .icons i {
+  font-size: 1.2rem;
+  padding: 8px;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
+  box-shadow: 2px 2px 9px #bebebe,
+    -2px -2px 9px #ffffff;
+}
+
+/* Style for service */
+
+#services {
+  padding: 60px 0;
+  background-color: var(--bg-color1);
+}
+
+.service-row {
+  display: grid;
+  grid-template-rows: repeat(1,1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: var(--bg-color2);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 40px 35px;
+  text-align: center;
+  transition: .4s;
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  transition: .4s;
+  color: var(--color1);
+}
+
+.service-content h6 {
+  color: var(--color1);
+  transition: .4s;
+  margin: 1rem 0;
+}
+
+.service-content p {
+  transition: .4s;
+  color: var(--color1);
+}
+
+.service-card:hover {
+  background-color: #525fe1;
+  transform: translateY(-10.5px);
+}
+
+.service-card:hover .icon,
+.service-card:hover h6,
+.service-card:hover p {
+  color: #ffff;
+}
+
+/* Style for project section */
+
+#projects {
+  padding: 60px 0;
+  background-color: var(--bg-color2);
+}
+
+.filter-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Portfolio Gallery */
+.portfolio-items {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: 2px 2px 9px #bebebe,
+  -2px -2px 9px #ffffff;
+  cursor: pointer;
+}
+.portfolio-content {
+ padding: 1rem;
+
+}
+
+.portfolio-item h6 {
+  color: var(--color1);
+  transition: .4s;
+  margin: 0.4rem 0;
+}
+
+.portfolio-items p {
+  transition: .4s;
+  color: var(--color1);
+}
+.portfolio-item:hover {
+  background-color: #525fe1;
+  transform: translateY(-10.5px);
+}
+
+.portfolio-item:hover .icon,
+.portfolio-item:hover h6,
+.portfolio-item:hover p {
+  color: #ffff;
+}
+/* Desktops 768px */
+
+@media (min-width:768px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    color: var(--color1);
+    font-weight: 600;
+  }
+
+  /* Header responsive */
+  header {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo del encabezado con opacidad inicial */
+    backdrop-filter: blur(10px);
+    padding: 0 15px;
+  }
+
+  .navbar-toggle i {
+    display: none;
+  }
+
+  .portfolio-navbar {
+    display: block;
+  }
+
+  .portfolio-navbar ul li {
+    display: inline;
+    padding: 0 10px;
+  }
+
+  .portfolio-navbar ul li a {
+    color: var(--color1);
+    line-height: 65px;
+  }
+
+  /* About section Responsive */
+
+  #about {
+    padding: 175px 0 150px 0;
+  }
+
+  .about-intro {
+    width: 60%;
+    margin: 0;
+    order: 1;
+    text-align: unset;
+  }
+
+  /* Imagen about Responsive */
+  .about-image {
+    width: 30%;
+    order: 2;
+  }
+
+  .about-content {
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  /* Resume intro Responsive */
+  #resume {
+    padding: 60px 0;
+  }
+  .resume-intro {
+    width: 50%;
+    padding-right: 6.25rem;
+  }
+
+  /* Resume body Responsive */
+  .resume-intro {
+    padding: 0 0;
+  }
+
+  .resume-body {
+    width: 50%;
+    margin-top: 0;
+    min-height: 400px;
+  }
+
+  .portfolio-row {
+    display: flex;
+  }
+
+  .resume-body h2 {
+    display: none;
+  }
+
+  .resume-heading {
+    padding: 20px 0;
+  }
+
+  .btn {
+    padding: 0 25px;
+    /* margin-top: 0; */
+    margin-bottom: 10px;
+  }
+
+  .qualification-content::after {
+    left: -2px;
+  }
+
+  .qualification-content::before {
+    left: 0;
+  }
+
+  /* Service Responsive */
+
+  .service-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Project Responsive */
+
+  .filter-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    max-width: 330px;
+  }
+  
+}

@@ -1,12 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jose Davila</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
 </head>
+
 <body>
-  <h1>El sitio web esta en actualizacion</h1>
-  <h2>Pronto estara funcionando</h2>
+
+  <!-- Inicio del header -->
+  <header>
+    <div class="portfolio-container">
+      <div class="portafolio-row header-wrap">
+        <div class="brand-name">
+          <a href="" class="logo">Jose</a>
+        </div>
+        <!-- Inicio de la navegacion -->
+        <div class="portfolio-navbar">
+          <ul>
+            <li>
+              <a href="#about" class="navbar-link">Inicio</a>
+            </li>
+            <li>
+              <a href="#resume" class="navbar-link">Acerca de mi</a>
+            </li>
+            <li>
+              <a href="#services" class="navbar-link">Servicios</a>
+            </li>
+            <li>
+              <a href="#projects" class="navbar-link">Proyectos</a>
+            </li>
+            <li>
+              <a href="#contact" class="navbar-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Fin de la navegacion -->
+        <div class="navbar-toggle">
+          <i class="lni lni-grid-alt"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Fin del header -->
+
+  <!-- Inicio Acerca de -->
+  <section id="about">
+    <div class="portfolio-container">
+      <div class="portfolio-row about-content">
+        <!-- I am -->
+        <div class="about-intro">
+          <div class="about-text">
+            <h1>Hola,<br>
+              mi nombre es Jose</h1>
+            <h3>Software Engineer | Desarrollador Front End Junior✨</h3>
+            <p>Mi creatividad se refleja en mi pasión por el <strong>diseño web</strong>, fusionando lo técnico con lo
+              estético para crear experiencias digitales excepcionales.</p>
+          </div>
+        </div>
+        <!--Fin  I am -->
+        <div class="about-image">
+          <img src="img/yo.png" alt="Foto de jose Davila">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin Acerca de -->
+
+  <!-- Resuemen del curriculum -->
+  <section id="resume">
+    <div class="portfolio-container">
+      <div class="portfolio-row">
+        <div class="resume-intro">
+          <h2><strong>Acerca de</strong></h2>
+          <div class="resume-text">
+            <p>Ingeniero de software independiente con habilidades destacadas en JavaScript, Java, SQL, HTML, CSS y Git.
+              Con experiencia en análisis de datos y desarrollo de sitios web, incluyendo aquellos que implican
+              tecnologías como React.</p>
+            <br>
+            <p>Apasionado por la tecnología, siempre buscando oportunidades para crecer y contribuir en un entorno
+              colaborativo. Mi enfoque orientado a metas y mi compromiso con la excelencia me han permitido sobresalir
+              como freelance independiente.</p>
+          </div>
+          <div class="hello-btn">
+            <a href="#contact">Contacto</a>
+          </div>
+        </div>
+        <!-- Fin del curriculum -->
+
+        <!--Inicio Educacion y experiencia -->
+        <div class="resume-body">
+          <h2><strong>Educación y experiencia</strong></h2>
+          <div class="resume-heading">
+            <button class="btn active" type="button" data-id="education">Educacion</button>
+            <button class="btn" type="button" data-id="experience">experiencia</button>
+            <button class="btn" type="button" data-id="skill">Skill</button>
+          </div>
+
+          <!--Inicio Educacion -->
+          <div class="resume-tab active" id="education">
+            <div class="qualification-content">
+              <h4 class="course">Ingeniera de software</h4>
+              <h6 class="institution">Universidad de cartagena</h6>
+              <span class="year">Julio 2018 – agosto 2023</span>
+            </div>
+
+            <div class="qualification-content">
+              <h4 class="course">Bachiller académico</h4>
+              <h6 class="institution">Institución educativa liceo J. Fernando velez, Magangue Bolivar</h6>
+              <span class="year">Noviembre - 2014</span>
+            </div>
+          </div>
+          <!--Fin Educacion -->
+
+          <!--Inicio Experiencia -->
+          <div class="resume-tab" id="experience">
+            <div class="qualification-content">
+              <h4 class="role">Desarrollador Web</h4>
+              <h6 class="organization">Bonmetique Colombia</h6>
+              <span class="year">febrero 12 de 2023 – agosto 15 de 2023</span>
+            </div>
+
+            <div class="qualification-content">
+              <h4 class="role">Analista de Datos</h4>
+              <h6 class="organization">inversiones surtioriente</h6>
+              <span class="year">marzo 19 de 2023 – noviembre 15 de 2023</span>
+            </div>
+          </div>
+          <!--Fin Experiencia -->
+
+          <!--Inicio Experiencia -->
+          <div class="resume-tab" id="skill">
+            <div class="bar-content">
+              <div class="bar-heading">
+                <div class="bar-title">
+                  <h4>Diseño web</h4>
+                </div>
+                <div class="icons">
+                  <i class="lni lni-html5"></i>
+                  <i class="lni lni-css3"></i>
+                  <i class="lni lni-javascript"></i>
+                  <i class="lni lni-react"></i>
+                </div>
+              </div>
+
+              <div class="bar-title">
+                <h4>Base de datos</h4>
+              </div>
+              <div class="icons">
+                <i class="lni lni-mysql"></i>
+              </div>
+              <div class="bar-title">
+                <h4>Herramientas</h4>
+              </div>
+              <div class="icons">
+                <i class="lni lni-github-original"></i>
+                <i class="lni lni-figma"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin Experiencia -->
+      </div>
+      <!--Fin Educacion y experiencia -->
+    </div>
+    </div>
+  </section>
+  <!-- Fin del curriculum -->
+
+  <!-- Inicio Servicios -->
+  <section id="services">
+    <div class="portfolio-container">
+      <h2>
+        <strong>Servicios</strong>
+      </h2>
+      <div class="service-row">
+        <div class="service-card">
+          <div class="icon">
+            <i class="lni lni-css3"></i>
+          </div>
+          <div class="service-content">
+            <h6>Desarrollo de sitios web y aplicaciones web</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas.</p>
+          </div>
+
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <i class="lni lni-pallet"></i>
+          </div>
+          <div class="service-content">
+            <h6>Optimización de la experiencia del usuario (UX).</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas.</p>
+          </div>
+
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <i class="lni lni-code"></i>
+          </div>
+          <div class="service-content">
+            <h6>Integración de API y servicios de terceros.</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas.</p>
+          </div>
+
+        </div>
+        <div class="service-card">
+          <div class="icon">
+            <i class="lni lni-stats-up"></i>
+          </div>
+          <div class="service-content">
+            <h6>Análisis de datos</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Fin Servicios -->
+
+  <!-- Inicio Proyectos -->
+  <section id="projects">
+    <div class="portfolio-container">
+      <div class="portfolio-row filter-wrap">
+        <h2><strong>Trabajos recientes</strong></h2>
+        <!-- Portafolo navegacion -->
+        <div class="portfolio-filter-nav">
+          <button class="btn active" data-id="all" type="button">Todos</button>
+          <button class="btn" data-id="design" type="button">Diseño</button>
+          <button class="btn" data-id="development" type="button">Desarrollo</button>
+        </div>
+        <!--Fin navegacion -->
+      </div>
+      <!-- Contenedor de los trabajos -->
+      <div class="portfolio-items">
+        <!-- Aquí se mostrarán los trabajos -->
+        <div class="portfolio-item" data-category="design">
+          <!-- Contenido del trabajo de diseño -->
+          <a href="https://lista-de-tareas-js-23.netlify.app/" target="_blank">
+            <img src="img/lista.PNG" alt="Trabajo de diseño">
+          </a>
+          <div class="portfolio-content">
+            <h6>Lista de tareas</h6>
+            <p>Lista de tareas con funciones interactivas, agrega y gestiona tareas de manera eficiente.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="development">
+          <!-- Contenido del trabajo de desarrollo -->
+          <a href="https://buscador-de-peliculas-vs1.netlify.app/" target="_blank">
+            <img src="img/buscador-peliculas.png" alt="Trabajo de desarrollo">
+          </a>
+          <div class="portfolio-content">
+            <h6>Buscador de peliculas</h6>
+            <p>Buscador de películas con API que simplifica la exploración de películas.</p>
+          </div>
+        
+        </div>
+        
+        <div class="portfolio-item" data-category="development">
+          <!-- Contenido del trabajo de desarrollo -->
+          <a href="https://aplicacion-del-clima-v1.netlify.app/" target="_blank">
+            <img src="img/appClima.png" alt="Trabajo de desarrollo">
+          </a>
+          <div class="portfolio-content">
+            <h6>Aplicacion del clima</h6>
+            <p>Aplicación del clima que muestra pronósticos basados en la ciudad buscada.</p>
+          </div>
+        
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Fin Proyectos -->
+
+    <!-- Inicio Contacto -->
+    <section id="contact">
+      <br> <br> <br>
+        <h3>Esta seccion se esta actualizando</h3>
+    </section>
+    <!-- Fin Contacto -->
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
