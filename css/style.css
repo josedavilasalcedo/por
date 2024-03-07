@@ -64,7 +64,14 @@ h4 {
 h6 {
   font-size: 1rem;
 }
-
+hr {
+  height: 3px;
+  border-radius: 5px;
+  border: none;
+  width: 20%;
+  background-color: #3e445530;
+  margin: 1rem auto;
+}
 p {
   color: var(--color1);
 }
@@ -106,6 +113,7 @@ header {
   padding: 15px;
   position: fixed;
   background-color: var(--bg-color1);
+  
 }
 
 header .portafolio-row.header-wrap {
@@ -480,6 +488,74 @@ h2 strong {
 .portfolio-item:hover p {
   color: #ffff;
 }
+
+/* Style contact */
+.container-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  font-size: 1.5rem;
+}
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bg-color2);
+  text-align: center;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+}
+.redes i {
+  font-size: 1.5rem;
+  color: #3e4455;
+}
+
+/* Escala y cambia de color con animación en hover */
+.redes i:hover {
+  animation: scaleAndColor 0.3s ease; /* Aplica la animación */
+}
+
+/* Define la animación */
+@keyframes scaleAndColor {
+  0% {
+    transform: scale(1);
+    color: #3e4455;
+  }
+  100% {
+    transform: scale(1.5);
+    color: #007bff;
+  }
+}
+
+
 /* Desktops 768px */
 
 @media (min-width:768px) {
@@ -500,6 +576,7 @@ h2 strong {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo del encabezado con opacidad inicial */
     backdrop-filter: blur(10px);
     padding: 0 15px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
   }
 
   .navbar-toggle i {
@@ -609,4 +686,15 @@ h2 strong {
     max-width: 330px;
   }
   
+  /* form Responsive */
+  .container-form {
+    max-width: 60%;
+    padding: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
 }
